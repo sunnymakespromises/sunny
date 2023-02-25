@@ -1,5 +1,5 @@
 /* /components/input.js */
-export default function Input({ value, status, type, style, classNames, onChange, ...extras }) {
+export default function Input({ value, status, type, style, styles, classNames, onChange, ...extras }) {
     /* NOTE
      * status can be one of three values: true, false, and null
      * true = valid/green
@@ -8,8 +8,8 @@ export default function Input({ value, status, type, style, classNames, onChange
      */
     let options = [
         { 
-            title: 'settingsMain', 
-            classNames: 'transition ease-in-out text-primary-900 dark:text-primary-50 text-2xl bg-primary-50 dark:bg-primary-700 hover:bg-primary-50 hover:dark:bg-primary-600 focus:bg-primary-50 focus:dark:bg-primary-600 focus:outline-none p-2 rounded',
+            title: 'main', 
+            classNames: 'transition ease-in-out text-primary-900 dark:text-primary-50 text-xl bg-primary-100 dark:bg-primary-800 focus:outline-none px-3 py-2 rounded-xl',
             trueStatus: 'bg-emerald-50 border border-emerald-500 text-emerald-900',
             falseStatus: 'bg-rose-50 border border-rose-500 text-rose-900',
             nullStatus: 'border border-transparent'
@@ -28,6 +28,6 @@ export default function Input({ value, status, type, style, classNames, onChange
         })
     }
     return (
-        <input className = {'font-main w-min ' + getOption()?.classNames + (status === false ? ' ' + getOption()?.falseStatus : '') + (status === true ? ' ' + getOption()?.trueStatus : '') + (status === null ? ' ' + getOption()?.nullStatus : '') + (classNames ? ' ' + classNames : '')} value = {value} type = {type} onChange = {onChange} {...extras}></input>
+        <input className = {'font-main w-min ' + getOption()?.classNames + (status === false ? ' ' + getOption()?.falseStatus : '') + (status === true ? ' ' + getOption()?.trueStatus : '') + (status === null ? ' ' + getOption()?.nullStatus : '') + (classNames ? ' ' + classNames : '')} style = {styles} value = {value} type = {type} onChange = {onChange} {...extras}></input>
     )
 }

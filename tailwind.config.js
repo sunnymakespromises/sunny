@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 
 const defaultTheme = require('tailwindcss/defaultTheme');
+const plugin = require('tailwindcss/plugin');
 
 module.exports = {
     content: [
@@ -11,62 +12,62 @@ module.exports = {
     theme: {
         extend: {
             fontFamily: {
-                main: ['"Lato"', ...defaultTheme.fontFamily.sans],
+                'main-ultralight': ['var(--font-main-ultralight)', ...defaultTheme.fontFamily.sans],
+                'main-thin': ['var(--font-main-thin)', ...defaultTheme.fontFamily.sans],
+                'main-thin-italic': ['var(--font-main-thin-italic)', ...defaultTheme.fontFamily.sans],
+                'main-light': ['var(--font-main-light)', ...defaultTheme.fontFamily.sans],
+                'main-regular': ['var(--font-main-regular)', ...defaultTheme.fontFamily.sans],
+                'main-regular-italic': ['var(--font-main-regular-italic)', ...defaultTheme.fontFamily.sans],
+                'main-bold': ['var(--font-main-bold)', ...defaultTheme.fontFamily.sans],
+                'main-black': ['var(--font-main-black)', ...defaultTheme.fontFamily.sans],
             },
             colors: {
                 transparent: 'transparent',
                 black: '#000',
                 white: '#fff',
                 primary: {
-                    50: "#f9f9f9",
-                    100: "#f3f3f3",
-                    200: "#eaeaea",
-                    300: "#dadada",
-                    400: "#b7b7b7",
-                    500: "#979797",
-                    600: "#6e6e6e",
-                    700: "#5b5b5b",
-                    800: "#3c3c3c",
-                    900: "#1c1c1c"
-                },
-                secondary: {
-                    50: "#f9f9f9",
-                    100: "#f3f3f3",
-                    200: "#eaeaea",
-                    300: "#dadada",
-                    400: "#b7b7b7",
-                    500: "#979797",
-                    600: "#6e6e6e",
-                    700: "#5b5b5b",
-                    800: "#3c3c3c",
-                    900: "#1c1c1c"
+                    50: '#F2F2F7',
+                    100: '#E5E5EA',
+                    200: '#D1D1D6',
+                    300: '#C7C7CC',
+                    400: '#AEAEB2',
+                    500: '#8E8E93',
+                    600: '#3A3A3C',
+                    700: '#2C2C2E',
+                    800: '#1C1C1E',
+                    900: '#000000'
                 },
                 accent: {
-                    50: "#fff1f2",
-                    100: "#ffe4e6",
-                    200: "#fecdd3",
-                    300: "#fda4af",
-                    400: "#fb7185",
-                    500: "#f43f5e",
-                    600: "#e11d48",
-                    700: "#be123c",
-                    800: "#9f1239",
-                    900: "#881337"
-                },
-                tertiary: {
-                    50: "#eff6ff",
-                    100: "#dbeafe",
-                    200: "#bfdbfe",
-                    300: "#93c5fd",
-                    400: "#60a5fa",
-                    500: "#3b82f6",
-                    600: "#2563eb",
-                    700: "#1d4ed8",
-                    800: "#1e40af",
-                    900: "#1e3a8a"
-                },
+                    DEFAULT: '#007AFF',
+                    50: '#B8DAFF',
+                    100: '#A3CFFF',
+                    200: '#7ABAFF',
+                    300: '#52A5FF',
+                    400: '#298FFF',
+                    500: '#007AFF',
+                    600: '#005FC7',
+                    700: '#00448F',
+                    800: '#002957',
+                    900: '#000F1F'
+                }
+            },
+            textShadow: {
+                sm: '0 1px 2px var(--tw-shadow-color)',
+                DEFAULT: '0 2px 4px var(--tw-shadow-color)',
+                lg: '0 8px 16px var(--tw-shadow-color)',
             }
         },
     },
-    plugins: [],
+    plugins: [
+        plugin(function ({ matchUtilities, theme }) {
+            matchUtilities(
+              {
+                'text-shadow': (value) => ({
+                  textShadow: value,
+                }),
+              },
+              { values: theme('textShadow') }
+            )
+        }),
+    ],
 }

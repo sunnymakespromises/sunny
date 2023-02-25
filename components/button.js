@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 
 /* /components/button.js */
-export default function Button({ text, style, isListener, classNames, onClick, ...extras }) {
+export default function Button({ text, style, styles, isListener, classNames, onClick, ...extras }) {
     /* useEffect
      * @param []
      *
@@ -26,10 +26,10 @@ export default function Button({ text, style, isListener, classNames, onClick, .
 
     let options = [
         {
-            title: 'settingsMain',
-            classNames: 'transition ease-in-out bg-accent-500 hover:bg-accent-400 dark:hover:bg-accent-400 p-2 rounded',
-            textClassNames: 'contents whitespace-nowrap font-main text-2xl text-primary-50 dark:text-primary-50 font-bold'
-        }
+            title: 'main',
+            classNames: 'transition ease-in-out px-3 py-2',
+            textClassNames: 'contents whitespace-nowrap font-main text-xl text-primary-900 dark:text-primary-50'
+        },
     ]
 
     /* getOption
@@ -44,7 +44,7 @@ export default function Button({ text, style, isListener, classNames, onClick, .
         })
     }
     return (
-        <div className = {getOption()?.classNames + (classNames ? ' ' + classNames : '') + ' cursor-pointer'} onClick = {onClick} {...extras}>
+        <div className = {getOption()?.classNames + (classNames ? ' ' + classNames : '') + ' cursor-pointer'} style = {styles} onClick = {onClick} {...extras}>
             <p className = {getOption()?.textClassNames}>{text}</p>
         </div>
     )
