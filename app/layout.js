@@ -4,6 +4,9 @@ import './globals.css'
 import localFont from '@next/font/local'
 import Header from '../components/header'
 import Dock from '../components/dock'
+import pages, { getPage } from '../res/pages'
+import { usePathname } from 'next/navigation'
+import { HomeProvider as Provider } from '../contexts/home'
 
 const mainUltralight = localFont({
     src: '../public/fonts/ultralight.ttf',
@@ -55,13 +58,19 @@ const mainBlack = localFont({
 
 /* /app/layout.js */
 export default function HomeLayout({ children }) {
+    const pathname = usePathname()
+    let currentPage = getPage(pathname)
+    let isHome = currentPage.path === '/'
+    let context = { pages, currentPage, isHome }
     return (
         <html lang='en' className = {'w-full h-full ' + mainUltralight.variable + ' ' + mainThin.variable + ' ' + mainThinItalic.variable + ' ' + mainLight.variable + ' ' + mainRegular.variable + ' ' + mainRegularItalic.variable + ' ' + mainBold.variable + ' ' + mainBlack.variable}>
             <head />
-            <body className = 'w-full h-full bg-[url("/img/bg.jpg")] bg-center bg-cover flex flex-col justify-center items-center pt-10 md:pt-7'>
-                <Header/>
-                {children}
-                <Dock/>
+            <body className = {'w-full h-full bg-[url("/img/bg.jpg")] bg-center bg-cover flex flex-col justify-center items-center ' + (isHome ? 'pt-10 ' : '') + 'md:pt-7'}>
+                <Provider value = {context}>
+                    <Header/>
+                        {children}
+                    <Dock/>
+                </Provider>
             </body>
         </html>
     )

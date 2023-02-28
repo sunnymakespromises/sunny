@@ -7,7 +7,7 @@ export default function Text({ style, styles, classNames, children, ...extras })
         },
         { 
             title: 'appTitle', 
-            classNames: 'whitespace-nowrap font-light text-xl md:text-base text-primary-50'
+            classNames: 'whitespace-nowrap font-light text-lg md:text-base text-primary-50'
         },
         { 
             title: 'headerText', 
