@@ -9,6 +9,11 @@ module.exports = {
         "./pages/**/*.{js,ts,jsx,tsx}",
         "./components/**/*.{js,ts,jsx,tsx}",
     ],
+    variants: {
+        extend: {
+          visibility: ['group-hover']
+        },
+    },
     theme: {
         extend: {
             fontFamily: {
@@ -25,6 +30,9 @@ module.exports = {
                 transparent: 'transparent',
                 black: '#000',
                 white: '#fff',
+                red: '#FE5F57',
+                yellow: '#FEBC2E',
+                green: '#2BC840',
                 primary: {
                     50: '#F2F2F7',
                     100: '#E5E5EA',
@@ -49,12 +57,18 @@ module.exports = {
                     700: '#00448F',
                     800: '#002957',
                     900: '#000F1F'
-                }
+                },
             },
             textShadow: {
                 sm: '0 1px 2px var(--tw-shadow-color)',
                 DEFAULT: '0 2px 4px var(--tw-shadow-color)',
                 lg: '0 8px 16px var(--tw-shadow-color)',
+            },
+            dropShadow: {
+                window: '5px 20px 30px rgba(0, 0, 0, 0.6)',
+            },
+            blur: {
+                system: '256px'
             }
         },
     },

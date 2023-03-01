@@ -1,7 +1,7 @@
 let pages = 
     [
         {
-            id: 8,
+            id: 0,
             title: 'Finder',
             headerTitle: 'Finder',
             headerItems: ['File', 'Edit', 'View', 'Go', 'Window', 'Help'],
@@ -40,12 +40,12 @@ let pages =
             }
         },
         {
-            id: 0,
-            title: 'System Settings',
-            headerTitle: 'System Settings',
+            id: 3,
+            title: 'Files',
+            headerTitle: 'Files',
             headerItems: ['File', 'Edit', 'View', 'Window', 'Help'],
-            path: '/settings',
-            logo: 'logos/settings.png',
+            path: '/files',
+            logo: 'logos/files.png',
             mobileDocked: true,
             visible: {
                 desktop: true,
@@ -53,12 +53,12 @@ let pages =
             }
         },
         {
-            id: 3,
-            title: 'Files',
-            headerTitle: 'Files',
+            id: 9,
+            title: 'Notes',
+            headerTitle: 'Notes',
             headerItems: ['File', 'Edit', 'View', 'Window', 'Help'],
-            path: '/files',
-            logo: 'logos/files.png',
+            path: '/blog',
+            logo: 'logos/notes.png',
             mobileDocked: false,
             visible: {
                 desktop: true,
@@ -115,8 +115,12 @@ let pages =
             }
         }
     ]
+    
+const getPageById = (id) => {
+    return pages.find((page) => page.id === id)
+}
 
-const getPage = (pathname) => {
+const getCurrentPage = (pathname) => {
     let selectedPage = pages.find(page => page.id === 8)
     for (let page of pages) { // loops through the pages
         if (page.path.includes('*')) { // if the page's path contains a '*'
@@ -143,5 +147,6 @@ const getPage = (pathname) => {
     }
     return selectedPage
 }
+
 export default pages
-export { getPage }
+export { getCurrentPage, getPageById }

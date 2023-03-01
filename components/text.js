@@ -3,7 +3,7 @@ export default function Text({ style, styles, classNames, children, ...extras })
     let options = [
         { 
             title: 'main', 
-            classNames: 'contents whitespace-nowrap font-main text-xl text-primary-900 dark:text-primary-50'
+            classNames: 'whitespace-nowrap font-main text-xl text-primary-900 dark:text-primary-50'
         },
         { 
             title: 'appTitle', 
@@ -12,6 +12,26 @@ export default function Text({ style, styles, classNames, children, ...extras })
         { 
             title: 'headerText', 
             classNames: 'whitespace-nowrap font-regular text-base text-primary-50 text-shadow-sm shadow-[#00000066]'
+        },
+        { 
+            title: 'contactTitle', 
+            classNames: 'whitespace-nowrap font-bold text-3xl text-primary-900 dark:text-primary-50'
+        },
+        { 
+            title: 'contactGroupTitle', 
+            classNames: 'whitespace-nowrap font-bold text-lg md:text-xs text-primary-500 dark:text-primary-500 text-opacity-50 dark:text-opacity-50'
+        },
+        { 
+            title: 'contactListItem', 
+            classNames: 'whitespace-nowrap font-bold md:font-main text-2xl md:text-sm text-primary-900 dark:text-primary-100'
+        },
+        { 
+            title: 'contactInfoTitle', 
+            classNames: 'whitespace-nowrap font-main text-base md:text-sm text-primary-800 dark:text-primary-500'
+        },
+        { 
+            title: 'contactInfoData', 
+            classNames: ' hitespace-nowrap font-main text-base md:text-sm text-accent-500 md:text-primary-800 md:dark:text-primary-100 dark:text-primary-100'
         }
     ]
 

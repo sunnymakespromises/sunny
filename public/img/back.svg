@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 38.28 68.06">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #007aff;
+      }
+    </style>
+  </defs>
+  <g id="Layer_2-2" data-name="Layer 2">
+    <g id="Layer_1-2" data-name="Layer 1-2">
+      <g id="Symbols">
+        <g id="Regular-S">
+          <path class="cls-1" d="M0,34.03c0,1.07,.44,2.05,1.22,2.88l30.18,29.98c.73,.78,1.76,1.17,2.88,1.17,2.29,0,4-1.71,4-4,0-1.12-.44-2.1-1.17-2.88L9.86,34.03,37.11,6.88c.73-.78,1.17-1.81,1.17-2.88,0-2.29-1.71-4-4-4-1.12,0-2.15,.39-2.88,1.17L1.22,31.15c-.78,.83-1.22,1.81-1.22,2.88Z"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
