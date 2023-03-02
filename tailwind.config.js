@@ -64,11 +64,15 @@ module.exports = {
                 DEFAULT: '0 2px 4px var(--tw-shadow-color)',
                 lg: '0 8px 16px var(--tw-shadow-color)',
             },
-            dropShadow: {
-                window: '5px 20px 30px rgba(0, 0, 0, 0.6)',
+            boxShadow: {
+                window: '0 35px 60px -15px rgba(0, 0, 0, 0.6)'
+                // window: '5px 20px 30px rgba(0, 0, 0, 0.6)',
             },
             blur: {
-                system: '256px'
+                header: '256px',
+                dock: '256px',
+                'window-dark': '32px',
+                'window-light': '256px'
             }
         },
     },

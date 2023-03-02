@@ -21,7 +21,7 @@ export default function Header({}) {
         getTime()
     }, [])
     return (
-        <div id = 'header' className = {'transition-all absolute top-0 w-full h-10 md:h-7 flex flex-row items-center px-4 md:px-4 pt-4 md:pt-0' + (isLandscape ? ' backdrop-blur-system backdrop-brightness-[0.90]' : ' backdrop-blur-0 backdrop-brightness-1') + ' z-10'}>
+        <div id = 'header' className = {'transition-all absolute top-0 w-full h-10 md:h-7 flex flex-row items-center px-4 md:px-4 pt-4 md:pt-0' + (isLandscape ? ' backdrop-blur-header backdrop-brightness-[0.90]' : ' backdrop-blur-0 backdrop-brightness-1') + ' z-10'}>
             <div id = 'header-left' className = 'w-full h-full flex flex-row items-center gap-6'>
                 <Text id = {isLandscape ? 'header-logo' : 'header-time'} style = 'headerText' classNames = {'!font-bold select-none' + (!isHome ? ' !text-primary-900 dark:!text-primary-50 md:!text-primary-50 md:dark:!text-primary-50' : '')}>{isLandscape ? '' : time}</Text>
         {isLandscape ? <>

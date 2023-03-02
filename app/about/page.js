@@ -57,7 +57,7 @@ function ContactList({currentContact, changeContact, isLandscape}) {
                         {group.contacts.map((contactId, contactIndex) => {
                             let contact = getContact(contactId)
                             return (
-                                <div key = {contactIndex} id = {'about-contact-list-item-' + contactId} className = {'relative w-full h-min flex flex-row items-center py-2 md:py-[6px] md:pl-2 rounded-lg' + (currentContact && currentContact.id === contactId ? ' bg-accent-500' : ' hover:bg-primary-100 hover:bg-opacity-20') +  ' cursor-pointer'} onClick = {() => changeContact(contactId)}>
+                                <div key = {contactIndex} id = {'about-contact-list-item-' + contactId} className = {'relative w-full h-min flex flex-row items-center py-2 md:py-[6px] md:pl-2 rounded-lg' + (currentContact && currentContact.id === contactId ? ' bg-accent-500' : ' hover:bg-primary-800 hover:bg-opacity-20 dark:hover:bg-primary-100 dark:hover:bg-opacity-20') +  ' cursor-pointer'} onClick = {() => changeContact(contactId)}>
                                     <Text style = 'contactListItem' classNames = {'select-none ml-2 md:ml-0' + (currentContact && currentContact.id === contactId ? ' text-primary-50' : '')}>{contact.name}</Text>
                                     {!isLandscape && (contactIndex !== (group.contacts.length - 1)) ? <div className = 'divider absolute bottom-0 h-[1.5px] w-[90%] bg-primary-500 dark:bg-primary-500 bg-opacity-20 dark:bg-opacity-20 ml-2'/> : null}
                                 </div>
