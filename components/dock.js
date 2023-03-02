@@ -46,7 +46,7 @@ export default function Dock({ children }) {
     else {
         return (
             <div id = 'dock-container' className = 'absolute flex flex-row items-center justify-center w-[40%] h-2 bottom-[2%] z-10' onClick = {() => onAppClick(0)}>
-                <div id = 'home-button' className = 'w-full h-full rounded-3xl bg-primary-900 dark:bg-primary-50'>
+                <div id = 'home-button' className = 'w-full h-full rounded-3xl bg-primary-900 dark:bg-primary-50 cursor-pointer'>
                 </div>
             </div>
         )

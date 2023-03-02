@@ -11,7 +11,7 @@ export default function Window({classNames, background = 'blur', children, ...ex
     let options = [
         { 
             title: 'blur', 
-            classNames: 'backdrop-blur-system backdrop-brightness-[2] dark:backdrop-brightness-[0.5]'
+            classNames: 'backdrop-blur-system backdrop-brightness-[2] dark:backdrop-brightness-[0.5] backdrop-saturate-[0.5] backdrop-contrast-[0.8]'
         },
         { 
             title: 'main', 

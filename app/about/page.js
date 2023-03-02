@@ -49,7 +49,7 @@ function ContactList({currentContact, changeContact, isLandscape}) {
         {contactGroups.map((group, groupIndex) => {
             let isMyCardGroup = group.title === 'My Card'
             return (
-                <div key = {groupIndex} id = {'about-contact-group-' + _.camelCase(group.title)} className = {'flex flex-' + (isMyCardGroup && !isLandscape ? 'row gap-4 cursor-pointer' : 'col gap-[1px]')} onClick = {() => {if (isMyCardGroup && !isLandscape) {changeContact(group.contacts[0])}}}>
+                <div key = {groupIndex} id = {'about-contact-group-' + _.camelCase(group.title)} className = {'flex flex-' + (isMyCardGroup && !isLandscape ? 'row gap-4 cursor-pointer' : 'col gap-[2px]')} onClick = {() => {if (isMyCardGroup && !isLandscape) {changeContact(group.contacts[0])}}}>
                 {!isMyCardGroup || isLandscape ? 
                     <>
                         <Text style = 'contactGroupTitle' classNames = 'pl-2 select-none'>{group.title}</Text>
@@ -57,9 +57,9 @@ function ContactList({currentContact, changeContact, isLandscape}) {
                         {group.contacts.map((contactId, contactIndex) => {
                             let contact = getContact(contactId)
                             return (
-                                <div key = {contactIndex} id = {'about-contact-list-item-' + contactId} className = {'relative w-full h-min flex flex-row items-center py-2 md:py-[6px] md:pl-2 md:rounded-lg' + (currentContact && currentContact.id === contactId ? ' bg-accent-500' : ' hover:bg-primary-100 hover:bg-opacity-20') +  ' cursor-pointer'} onClick = {() => changeContact(contactId)}>
+                                <div key = {contactIndex} id = {'about-contact-list-item-' + contactId} className = {'relative w-full h-min flex flex-row items-center py-2 md:py-[6px] md:pl-2 rounded-lg' + (currentContact && currentContact.id === contactId ? ' bg-accent-500' : ' hover:bg-primary-100 hover:bg-opacity-20') +  ' cursor-pointer'} onClick = {() => changeContact(contactId)}>
                                     <Text style = 'contactListItem' classNames = {'select-none ml-2 md:ml-0' + (currentContact && currentContact.id === contactId ? ' text-primary-50' : '')}>{contact.name}</Text>
-                                    {!isLandscape ? <div className = 'divider absolute bottom-0 h-[1.5px] w-[90%] bg-primary-500 dark:bg-primary-500 bg-opacity-20 dark:bg-opacity-20 ml-2'/> : null}
+                                    {!isLandscape && (contactIndex !== (group.contacts.length - 1)) ? <div className = 'divider absolute bottom-0 h-[1.5px] w-[90%] bg-primary-500 dark:bg-primary-500 bg-opacity-20 dark:bg-opacity-20 ml-2'/> : null}
                                 </div>
                             )
                         })}
@@ -83,7 +83,7 @@ function ContactList({currentContact, changeContact, isLandscape}) {
 
 function ContactCard({currentContact, changeContact, isLandscape}) {
     return (
-        <div id = 'about-card' className = 'w-full h-full bg-primary-100 dark:bg-primary-800 flex flex-col pt-24 md:pt-6 p-2 md:p-6 gap-6'>
+        <div id = 'about-card' className = 'w-full h-full bg-primary-100 md:bg-primary-50 md:dark:bg-primary-800 dark:bg-primary-800 flex flex-col pt-24 md:pt-6 p-2 md:p-6 gap-6'>
                 <div id = 'about-top' className = 'relative w-full h-[20%] md:h-[15%] flex flex-col md:flex-row justify-center items-center gap-2'>
                 {!isLandscape ? 
                     <div className = 'about-back absolute -top-10 left-0 h-6 flex flex-row items-center gap-1 cursor-pointer' onClick = {() => changeContact(null)}>
