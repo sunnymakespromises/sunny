@@ -39,7 +39,7 @@ export default function Window({classNames, background = 'blur', children, ...ex
         return (
             <div className = {'transition-all window relative flex ' + (isLandscape ? 'rounded-2xl' : '' ) + ' overflow-hidden' + (getOption() ? ' ' + getOption()?.classNames : '') + (isExpanded ? ' !w-full !h-full' : '') + ' md:border-[1px] md:dark:border-white md:border-primary-800 md:border-opacity-10 md:dark:border-opacity-25 md:shadow-window' + (classNames ? ' ' + classNames : '')} {...extras}>
             {isLandscape ? 
-                <div className = 'group absolute h-3 top-0 left-0 flex flex-row items-center gap-[6px] m-3'>
+                <div className = 'window-buttons group absolute h-3 top-0 left-0 flex flex-row items-center gap-[6px] m-3'>
                     <div id = 'close-window' className = 'h-full aspect-square rounded-full bg-red cursor-pointer' onClick = {() => onClose(currentPage.id)}>
                         <Image path = 'close.png' classNames = 'invisible group-hover:visible h-full aspect-square'/>
                     </div>
