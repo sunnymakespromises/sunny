@@ -13,19 +13,19 @@ let pages =
                 mobile: false
             }
         },
-        {
-            id: 1,
-            title: 'Mail',
-            headerTitle: 'Mail',
-            headerItems: ['File', 'Edit', 'View', 'Mailbox', 'Message', 'Format', 'Window', 'Help'],
-            path: '/contact',
-            logo: 'logos/mail.png',
-            mobileDocked: true,
-            visible: {
-                desktop: true,
-                mobile: true
-            }
-        },
+        // {
+        //     id: 1,
+        //     title: 'Mail',
+        //     headerTitle: 'Mail',
+        //     headerItems: ['File', 'Edit', 'View', 'Mailbox', 'Message', 'Format', 'Window', 'Help'],
+        //     path: '/contact',
+        //     logo: 'logos/mail.png',
+        //     mobileDocked: true,
+        //     visible: {
+        //         desktop: true,
+        //         mobile: true
+        //     }
+        // },
         {
             id: 2,
             title: 'Contacts',
@@ -39,26 +39,38 @@ let pages =
                 mobile: true
             }
         },
+        // {
+        //     id: 3,
+        //     title: 'Files',
+        //     headerTitle: 'Files',
+        //     headerItems: ['File', 'Edit', 'View', 'Window', 'Help'],
+        //     path: '/files',
+        //     logo: 'logos/files.png',
+        //     mobileDocked: true,
+        //     visible: {
+        //         desktop: true,
+        //         mobile: true
+        //     }
+        // },
+        // {
+        //     id: 9,
+        //     title: 'Notes',
+        //     headerTitle: 'Notes',
+        //     headerItems: ['File', 'Edit', 'View', 'Window', 'Help'],
+        //     path: '/blog',
+        //     logo: 'logos/notes.png',
+        //     mobileDocked: true,
+        //     visible: {
+        //         desktop: true,
+        //         mobile: true
+        //     }
+        // },
         {
             id: 3,
-            title: 'Files',
-            headerTitle: 'Files',
-            headerItems: ['File', 'Edit', 'View', 'Window', 'Help'],
-            path: '/files',
-            logo: 'logos/files.png',
-            mobileDocked: true,
-            visible: {
-                desktop: true,
-                mobile: true
-            }
-        },
-        {
-            id: 9,
-            title: 'Notes',
-            headerTitle: 'Notes',
-            headerItems: ['File', 'Edit', 'View', 'Window', 'Help'],
-            path: '/blog',
-            logo: 'logos/notes.png',
+            title: 'LinkedIn',
+            headerTitle: 'LinkedIn',
+            path: 'https://linkedin.com/in/marquis-livingston-0b510815b/',
+            logo: 'logos/linkedin.png',
             mobileDocked: false,
             visible: {
                 desktop: true,
@@ -82,7 +94,7 @@ let pages =
             title: 'EPLB',
             headerTitle: 'EPLB',
             path: 'https://www.eplb.xyz',
-            logo: 'logos/settings.png',
+            logo: 'logos/eplb.png',
             mobileDocked: false,
             visible: {
                 desktop: true,
@@ -101,19 +113,19 @@ let pages =
                 mobile: true
             }
         },
-        {
-            id: 7,
-            title: 'Wallet',
-            headerTitle: 'Wallet',
-            headerItems: ['File', 'Edit', 'View', 'Window', 'Help'],
-            path: '/donate',
-            logo: 'logos/wallet.png',
-            mobileDocked: false,
-            visible: {
-                desktop: true,
-                mobile: true
-            }
-        }
+        // {
+        //     id: 7,
+        //     title: 'Wallet',
+        //     headerTitle: 'Wallet',
+        //     headerItems: ['File', 'Edit', 'View', 'Window', 'Help'],
+        //     path: '/donate',
+        //     logo: 'logos/wallet.png',
+        //     mobileDocked: false,
+        //     visible: {
+        //         desktop: true,
+        //         mobile: true
+        //     }
+        // }
     ]
     
 const getPageById = (id) => {

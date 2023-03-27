@@ -28,7 +28,7 @@ export default function About() {
     }, [isLandscape])
 
     return (
-        <Window id = 'about-window' classNames = 'w-full md:w-[55%] h-full md:h-[90%] flex-row' background = 'blur'>
+        <Window id = 'about-window' classNames = 'w-full h-full flex-row' background = 'blur'>
             {isLandscape || currentContact === null ? <ContactList currentContact = {currentContact} changeContact = {changeContact} isLandscape = {isLandscape}/> : null}
             {currentContact !== null ? <ContactCard currentContact = {currentContact} changeContact = {changeContact} isLandscape = {isLandscape}/> : null}
         </Window>
@@ -105,7 +105,7 @@ function ContactCard({currentContact, changeContact, isLandscape}) {
                 <Image path = {currentContact.picture} classNames = 'h-full aspect-square rounded-full'/>
                 <Text style = 'main' classNames = '!text-3xl md:!text-xl select-none'>{currentContact.name}</Text>
             </div>
-            <div id = 'about-info' className = 'w-full h-full flex flex-col gap-2'>
+            <div id = 'about-info' className = 'w-full h-full flex flex-col gap-2 overflow-auto'>
                 {Object.keys(currentContact.info).map((key, index) => {
                     return (
                         <div key = {index} id = {'about-info-' + _.camelCase(key)} className = 'h-min w-full flex flex-col bg-primary-50 dark:bg-primary-600 md:bg-transparent gap-[2px] rounded-xl md:rounded-none px-4 py-2 md:px-0 md:py-0'>
