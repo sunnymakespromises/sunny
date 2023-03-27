@@ -62,12 +62,12 @@ const mainBlack = localFont({
 
 /* /app/layout.js */
 export default function HomeLayout({ children }) {
-    const { setItem, getItem, removeItem } = useStorage()
+    const { setItem, getItem } = useStorage()
     const [minimized, setMinimized] = useState([])
     const [opened, setOpened] = useState(getItem('opened'))
     const pathname = usePathname()
     let currentPage = getCurrentPage(pathname)
-    let isHome = currentPage.path === '/'
+    let isHome = currentPage ? currentPage.path === '/' : false
     const [sm, md, lg] = useBreakpoints()
     const isLandscape = !sm && !md
     const router = useRouter()
