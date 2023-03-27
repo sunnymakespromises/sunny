@@ -78,7 +78,7 @@ export default function HomeLayout({ children }) {
     }, [])
 
     useEffect(() => {
-        setItem('opened', JSON.stringify(addToArray(opened, currentPage.id)))
+        setItem('opened', JSON.stringify(addToArray(opened, currentPage?.id)))
         setOpened(getItem('opened'))
     }, [pathname])
 
