@@ -64,14 +64,15 @@ const mainBlack = localFont({
 export default function HomeLayout({ children }) {
     const [minimized, setMinimized] = useState([])
     const [opened, setOpened] = useState([0])
+    const [currentPage, setCurrentPage] = useState(getCurrentPage('/'))
     const pathname = usePathname()
-    let currentPage = getCurrentPage(pathname)
     let isHome = currentPage.path === '/'
     const [sm, md, lg] = useBreakpoints()
     const isLandscape = !sm && !md
     const router = useRouter()
 
     useEffect(() => {
+        setCurrentPage(getCurrentPage(pathname))
         setOpened(addToArray(opened, currentPage.id))
     }, [pathname])
 
