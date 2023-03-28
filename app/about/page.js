@@ -28,7 +28,7 @@ export default function About() {
     }, [isLandscape])
 
     return (
-        <Window id = 'about-window' classNames = 'w-full h-full flex-row' background = 'blur'>
+        <Window id = 'about-window' classNames = 'w-full md:w-[50%] h-full md:h-[95%] flex-row' background = 'blur'>
             {isLandscape || currentContact === null ? <ContactList currentContact = {currentContact} changeContact = {changeContact} isLandscape = {isLandscape}/> : null}
             {currentContact !== null ? <ContactCard currentContact = {currentContact} changeContact = {changeContact} isLandscape = {isLandscape}/> : null}
         </Window>

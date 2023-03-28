@@ -82,7 +82,12 @@ export default function HomeLayout({ children }) {
         }
         else {
             setOpened(addToArray(opened, id))
-            router.push(getPageById(id).path)
+            if (getPageById(id).path.includes('https://')) {
+                window.location.href = getPageById(id).path
+            }
+            else {
+                router.push(getPageById(id).path)
+            }
         }
     }
 
@@ -120,15 +125,15 @@ export default function HomeLayout({ children }) {
 
     let context = { router, pages, currentPage, isHome, sm, md, lg, isLandscape, onAppClick, minimized, onMinimize, onClose, opened }
     return (
-        <html lang='en' className = {'w-full h-full ' + mainUltralight.variable + ' ' + mainThin.variable + ' ' + mainThinItalic.variable + ' ' + mainLight.variable + ' ' + mainRegular.variable + ' ' + mainRegularItalic.variable + ' ' + mainBold.variable + ' ' + mainBlack.variable}>
+        <html lang='en' className = {'w-screen h-screen overflow-hidden overscroll-none ' + mainUltralight.variable + ' ' + mainThin.variable + ' ' + mainThinItalic.variable + ' ' + mainLight.variable + ' ' + mainRegular.variable + ' ' + mainRegularItalic.variable + ' ' + mainBold.variable + ' ' + mainBlack.variable} style={{scrollBehavior: 'smooth'}}>
             <head />
-            <body className = {'w-full h-full flex flex-col justify-center items-center ' + (isHome ? 'pt-10 ' : '') + 'md:pt-7'}>
+            <body className = {'w-full h-full flex flex-col items-center'}>
                 <div id = 'background' className = 'absolute top-0 left-0 -z-10 w-full h-full bg-[url("/img/bg.jpg")] bg-center bg-cover' onClick = {() => onAppClick(0)}/>
                 <Provider value = {context}>
                     <Header/>
-                        <div id = 'main' className = 'w-full h-full flex flex-col items-center justify-center'>
-                            {children}
-                        </div>
+                    <div id = 'main' className = 'relative w-full grow'>
+                        {children}
+                    </div>
                     <Dock/>
                 </Provider>
             </body>

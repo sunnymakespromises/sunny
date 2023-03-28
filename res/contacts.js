@@ -44,16 +44,16 @@ let contacts = [
                     <Text style = 'contactInfoData'>Self-taught in <b>software development</b> using Swift and SwiftUI.</Text>
                     <Text style = 'contactInfoData'>Experience <b>working with clients</b> to create custom websites.</Text>
                 </>,
-            // 'Skills':
-            //     <>
-            //         <Text style = 'contactInfoData'>Quick learner</Text>
-            //         <Text style = 'contactInfoData'>Self-starter</Text>
-            //         <Text style = 'contactInfoData'>Detail-Oriented</Text>
-            //         <Text style = 'contactInfoData'>Driven and passionate</Text>
-            //         <Text style = 'contactInfoData'>Flexible</Text>
-            //         <Text style = 'contactInfoData'>Dedicated to elegant, readable code</Text>
-            //         <Text style = 'contactInfoData'>Pleasant and cooperative with others</Text>
-            //     </>
+            'Skills':
+                <>
+                    <Text style = 'contactInfoData'>Quick learner</Text>
+                    <Text style = 'contactInfoData'>Self-starter</Text>
+                    <Text style = 'contactInfoData'>Detail-Oriented</Text>
+                    <Text style = 'contactInfoData'>Driven and passionate</Text>
+                    <Text style = 'contactInfoData'>Flexible</Text>
+                    <Text style = 'contactInfoData'>Dedicated to elegant, readable code</Text>
+                    <Text style = 'contactInfoData'>Pleasant and cooperative with others</Text>
+                </>
         }
     },
     {

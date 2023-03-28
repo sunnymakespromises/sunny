@@ -48,7 +48,7 @@ export default function App({ id, title, logo, isDocked, hovered, setHovered, cu
                     <Text style = 'appTitle' classNames = 'app-title h-min select-none'>{title}</Text>
                 </div>
             :null}
-                <Image styles = {{transform: 'scale(' + scale + ')'}} path = {logo} classNames = 'app-logo h-full aspect-square rounded-2xl cursor-pointer origin-bottom'/>
+                <Image styles = {{transform: 'scale(' + scale + ')'}} path = {logo} classNames = 'app-logo h-full aspect-square rounded-2xl cursor-pointer origin-bottom shadow-app'/>
                 <div className = {'transition-all app-opened-indicator h-1 aspect-square rounded-full bg-white ' + (opened.includes(id) ? 'bg-opacity-50' : 'bg-opacity-0')}/>
             </div>
         )

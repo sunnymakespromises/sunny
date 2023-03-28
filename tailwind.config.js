@@ -65,7 +65,8 @@ module.exports = {
                 lg: '0 8px 16px var(--tw-shadow-color)',
             },
             boxShadow: {
-                window: '0 35px 60px -15px rgba(0, 0, 0, 0.6)'
+                window: '0 35px 60px -15px rgba(0, 0, 0, 0.6)',
+                app: '0 2px 5px -2px rgba(0, 0, 0, 0.4)'
                 // window: '5px 20px 30px rgba(0, 0, 0, 0.6)',
             },
             blur: {

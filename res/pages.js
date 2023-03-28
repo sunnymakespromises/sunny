@@ -69,7 +69,7 @@ let pages =
             id: 3,
             title: 'LinkedIn',
             headerTitle: 'LinkedIn',
-            path: 'https://linkedin.com/in/marquis-livingston-0b510815b/',
+            path: 'https://www.linkedin.com/in/marquis-livingston-0b510815b/',
             logo: 'logos/linkedin.png',
             mobileDocked: false,
             visible: {
@@ -81,7 +81,7 @@ let pages =
             id: 4,
             title: 'GitHub',
             headerTitle: 'GitHub',
-            path: 'https://github.com/sunnymakespromises',
+            path: 'https://www.github.com/sunnymakespromises',
             logo: 'logos/github.png',
             mobileDocked: false,
             visible: {

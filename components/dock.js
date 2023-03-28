@@ -30,7 +30,7 @@ export default function Dock({ children }) {
 
     if (isHome || !isHome && isLandscape) {
         return (
-            <div ref = {dockContainerRef} id = 'dock-container' className = 'flex flex-row items-center justify-center gap-2 w-[90%] md:w-[80%] h-[7.5rem] md:h-28 mb-[5%] md:mb-[1%] rounded-3xl backdrop-blur-dock backdrop-brightness-[1.4] dark:backdrop-brightness-[0.8] md:border-[1px] md:border-white md:border-opacity-25 z-10'>
+            <div ref = {dockContainerRef} id = 'dock-container' className = 'flex flex-row items-center justify-center shrink-0 gap-2 w-[90%] md:w-min h-[7.5rem] md:h-28 mb-[5%] md:mb-[1%] rounded-3xl backdrop-blur-dock backdrop-brightness-[1.4] dark:backdrop-brightness-[0.8] md:border-[1px] md:border-white md:border-opacity-25 z-10'>
                 {isLandscape ? pages.map((page, index) => {
                     if (page.visible.desktop === true) {
                         return <App key = {index} id = {page.id} title = {page.title} logo = {page.logo} isDocked = {true} hovered = {hovered} setHovered = {setHovered} cursorPos = {cursorPos}/>
