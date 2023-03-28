@@ -62,12 +62,12 @@ const mainBlack = localFont({
 
 /* /app/layout.js */
 export default function HomeLayout({ children }) {
-    const { setItem, getItem } = useStorage()
+    const { setItem, getItem, removeItem } = useStorage()
     const [minimized, setMinimized] = useState([])
     const [opened, setOpened] = useState(getItem('opened'))
     const pathname = usePathname()
     let currentPage = getCurrentPage(pathname)
-    let isHome = currentPage ? currentPage.path === '/' : false
+    let isHome = currentPage.path === '/'
     const [sm, md, lg] = useBreakpoints()
     const isLandscape = !sm && !md
     const router = useRouter()
@@ -78,7 +78,7 @@ export default function HomeLayout({ children }) {
     }, [])
 
     useEffect(() => {
-        setItem('opened', JSON.stringify(addToArray(opened, currentPage?.id)))
+        setItem('opened', JSON.stringify(addToArray(opened, currentPage.id)))
         setOpened(getItem('opened'))
     }, [pathname])
 

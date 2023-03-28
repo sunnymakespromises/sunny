@@ -25,8 +25,8 @@ export default function Header({}) {
             <div id = 'header-left' className = 'w-full h-full flex flex-row items-center gap-6'>
                 <Text id = {isLandscape ? 'header-logo' : 'header-time'} style = 'headerText' classNames = {'!font-bold select-none' + (!isHome ? ' !text-primary-900 dark:!text-primary-50 md:!text-primary-50 md:dark:!text-primary-50' : '')}>{isLandscape ? '' : time}</Text>
         {isLandscape ? <>
-                <Text id = 'header-title' style = 'headerText' classNames = '!font-bold select-none'>{ currentPage?.headerTitle }</Text>
-                {currentPage?.headerItems.map((item, index) => {
+                <Text id = 'header-title' style = 'headerText' classNames = '!font-bold select-none'>{ currentPage.headerTitle }</Text>
+                {currentPage.headerItems.map((item, index) => {
                     return <Text key = {index} style = 'headerText' classNames = 'header-item select-none'>{item}</Text>
                 })}
         </>:null}
