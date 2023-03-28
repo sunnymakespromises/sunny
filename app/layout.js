@@ -62,24 +62,17 @@ const mainBlack = localFont({
 
 /* /app/layout.js */
 export default function HomeLayout({ children }) {
-    const { setItem, getItem, removeItem } = useStorage()
     const [minimized, setMinimized] = useState([])
-    const [opened, setOpened] = useState(getItem('opened'))
+    const [opened, setOpened] = useState([0])
     const pathname = usePathname()
     let currentPage = getCurrentPage(pathname)
     let isHome = currentPage.path === '/'
     const [sm, md, lg] = useBreakpoints()
     const isLandscape = !sm && !md
     const router = useRouter()
-    useEffect(() => {
-        if (!getItem('opened')) {
-            setItem('opened', '[0]')
-        }
-    }, [])
 
     useEffect(() => {
-        setItem('opened', JSON.stringify(addToArray(opened, currentPage.id)))
-        setOpened(getItem('opened'))
+        setOpened(addToArray(opened, currentPage.id))
     }, [pathname])
 
     function onAppClick(id) {
@@ -87,15 +80,13 @@ export default function HomeLayout({ children }) {
             setMinimized(removeFromArray(minimized, id))
         }
         else {
-            setItem('opened', JSON.stringify(addToArray(opened, id)))
-            setOpened(getItem('opened'))
+            setOpened(addToArray(opened, id))
             router.push(getPageById(id).path)
         }
     }
 
     function onClose(id) {
-        setItem('opened', JSON.stringify(removeFromArray(opened, id)))
-        setOpened(getItem('opened'))
+        setOpened(removeFromArray(opened, id))
         onAppClick(0)
     }
 
