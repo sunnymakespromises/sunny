@@ -90,8 +90,8 @@ let pages =
             }
         },
         {
-            id: 5,
-            title: 'Premier League Belt',
+            id: 6,
+            title: 'EPLB',
             headerTitle: 'Premier League Belt',
             path: 'https://www.eplb.xyz',
             logo: 'logos/eplb.png',
@@ -101,18 +101,18 @@ let pages =
                 mobile: true
             }
         },
-        // {
-        //     id: 6,
-        //     title: 'F1LTHY',
-        //     headerTitle: 'F1LTHY',
-        //     path: 'https://www.f1lthyware.com',
-        //     logo: 'logos/f1lthy.png',
-        //     mobileDocked: false,
-        //     visible: {
-        //         desktop: true,
-        //         mobile: true
-        //     }
-        // },
+        {
+            id: 5,
+            title: 'catdogsnake',
+            headerTitle: 'catdogsnake',
+            path: 'https://www.catdogsnake.xyz',
+            logo: 'logos/catdogsnake.png',
+            mobileDocked: false,
+            visible: {
+                desktop: true,
+                mobile: true
+            }
+        },
         // {
         //     id: 7,
         //     title: 'Wallet',
