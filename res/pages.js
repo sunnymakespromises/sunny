@@ -91,8 +91,8 @@ let pages =
         },
         {
             id: 5,
-            title: 'EPLB',
-            headerTitle: 'EPLB',
+            title: 'Premier League Belt',
+            headerTitle: 'Premier League Belt',
             path: 'https://www.eplb.xyz',
             logo: 'logos/eplb.png',
             mobileDocked: false,
@@ -101,18 +101,18 @@ let pages =
                 mobile: true
             }
         },
-        {
-            id: 6,
-            title: 'F1LTHY',
-            headerTitle: 'F1LTHY',
-            path: 'https://www.f1lthyware.com',
-            logo: 'logos/f1lthy.png',
-            mobileDocked: false,
-            visible: {
-                desktop: true,
-                mobile: true
-            }
-        },
+        // {
+        //     id: 6,
+        //     title: 'F1LTHY',
+        //     headerTitle: 'F1LTHY',
+        //     path: 'https://www.f1lthyware.com',
+        //     logo: 'logos/f1lthy.png',
+        //     mobileDocked: false,
+        //     visible: {
+        //         desktop: true,
+        //         mobile: true
+        //     }
+        // },
         // {
         //     id: 7,
         //     title: 'Wallet',
