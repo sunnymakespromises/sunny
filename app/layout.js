@@ -73,7 +73,7 @@ export default function HomeLayout({ children }) {
 
     useEffect(() => {
         setCurrentPage(getCurrentPage(pathname))
-        setOpened(addToArray(opened, currentPage.id))
+        setOpened(addToArray(opened, getCurrentPage(pathname).id))
     }, [pathname])
 
     function onAppClick(id) {
