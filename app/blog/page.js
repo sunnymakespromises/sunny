@@ -6,7 +6,7 @@ import Window from '../../components/window'
 import { useHomeContext } from '../../contexts/home'
 import { getPost, getPostGroups } from '../../res/posts'
 
-/* /app/donate/blog.js */
+/* /app/blog/page.js */
 export default function Blog() {
     const { isLandscape } = useHomeContext()
     const [currentPost, setCurrentPost] = useState(isLandscape ? getPost(0) : null)

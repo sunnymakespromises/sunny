@@ -9,7 +9,7 @@ import Window from '../../components/window'
 import { useHomeContext } from '../../contexts/home'
 import { getContactGroups, getContact } from '../../res/contacts'
 
-/* /app/donate/about.js */
+/* /app/about/page.js */
 export default function About() {
     const { isLandscape } = useHomeContext()
     const [currentContact, setCurrentContact] = useState(isLandscape ? getContact(0) : null)
