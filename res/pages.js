@@ -113,6 +113,18 @@ let pages =
                 mobile: true
             }
         },
+        {
+            id: 7,
+            title: 'Betsy',
+            headerTitle: 'Betsy',
+            path: 'https://www.betsy.digital',
+            logo: 'logos/betsy.png',
+            mobileDocked: false,
+            visible: {
+                desktop: true,
+                mobile: true
+            }
+        },
         // {
         //     id: 7,
         //     title: 'Wallet',
